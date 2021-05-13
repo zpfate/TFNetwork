@@ -14,27 +14,27 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - TFKit-Objc (0.0.4):
-    - TFKit-Objc/BaseClass (= 0.0.4)
-    - TFKit-Objc/Category (= 0.0.4)
-    - TFKit-Objc/Utils (= 0.0.4)
-  - TFKit-Objc/BaseClass (0.0.4)
-  - TFKit-Objc/Category (0.0.4)
-  - TFKit-Objc/Utils (0.0.4)
+  - TFKit-Objc (0.0.5):
+    - TFKit-Objc/BaseClass (= 0.0.5)
+    - TFKit-Objc/Category (= 0.0.5)
+    - TFKit-Objc/Utils (= 0.0.5)
+  - TFKit-Objc/BaseClass (0.0.5)
+  - TFKit-Objc/Category (0.0.5)
+  - TFKit-Objc/Utils (0.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - TFKit-Objc (~> 0.0.4)
 
 SPEC REPOS:
-  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+  trunk:
     - AFNetworking
     - TFKit-Objc
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  TFKit-Objc: 659acd89d7602ed51002879c8643d13c691187dc
+  TFKit-Objc: 4b55bdf4f33c7578433d13764dd385d3360324c4
 
-PODFILE CHECKSUM: 4d038cb97dcc0d161a14cad20c085499e01e72f9
+PODFILE CHECKSUM: 8160c871b9d9314c687c9ad4eec434e9009c610d
 
-COCOAPODS: 1.9.0.beta.2
+COCOAPODS: 1.10.0

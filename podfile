@@ -1,9 +1,24 @@
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
-platform :ios, '10.0'
-target 'ZLNetwork' do
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'TFNetwork' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
 
 pod 'TFKit-Objc', '~> 0.0.4'
 pod 'AFNetworking', '~> 3.2.1'
 
-end
 
+  # Pods for TFNetwork
+
+  target 'TFNetworkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'TFNetworkUITests' do
+    # Pods for testing
+  end
+
+end
