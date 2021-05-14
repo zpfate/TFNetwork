@@ -1,5 +1,5 @@
 //
-//  TFNetworkConfig.h
+//  TFNetworkEnvironment.h
 //  TFNetwork
 //
 //  Created by Twisted Fate on 2021/5/14.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TFNetworkConfig : NSObject
+@interface TFNetworkEnvironment : NSObject
 
 /// 环境名称
 @property (nonatomic, strong) NSString *environment;

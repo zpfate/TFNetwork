@@ -1,18 +1,18 @@
 //
-//  TFNetworkConfig.m
+//  TFNetworkEnvironment.m
 //  TFNetwork
 //
 //  Created by Twisted Fate on 2021/5/14.
 //
 
-#import "TFNetworkConfig.h"
+#import "TFNetworkEnvironment.h"
 #import <TFKit_Objc/TFKit-Objc.h>
 
-@interface TFNetworkConfig ()
+@interface TFNetworkEnvironment ()
 
 @end
 
-@implementation TFNetworkConfig
+@implementation TFNetworkEnvironment
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     self = [super init];

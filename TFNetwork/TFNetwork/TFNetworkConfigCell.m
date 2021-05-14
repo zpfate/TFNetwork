@@ -1,13 +1,13 @@
 //
-//  TFNetworkConfigCell.m
+//  TFNetworkEnvironmentCell.m
 //  TFNetwork
 //
 //  Created by Twisted Fate on 2021/5/14.
 //
 
-#import "TFNetworkConfigCell.h"
+#import "TFNetworkEnvironmentCell.h"
 
-@implementation TFNetworkConfigCell
+@implementation TFNetworkEnvironmentCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

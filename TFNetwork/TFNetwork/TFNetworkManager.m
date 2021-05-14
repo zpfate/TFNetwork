@@ -6,12 +6,12 @@
 //
 
 #import "TFNetworkManager.h"
-#import "TFNetworkConfig.h"
+#import "TFNetworkEnvironment.h"
 @interface TFNetworkManager ()
 
 @property (nonatomic, strong) NSURL *baseURL;
 
-@property (nonatomic, strong) NSArray <TFNetworkConfig *>*environments;
+@property (nonatomic, strong) NSArray <TFNetworkEnvironment *>*environments;
 
 @end
 
@@ -27,8 +27,20 @@
     return manager;
 }
 
+- (BOOL)loadNetworkEnvironmens:(NSArray <TFNetworkEnvironment *>*)environments {
+
+    self.environments = environments;
+    return YES;
+    
+}
+
 + (BOOL)loadNetworkConfigAtPath:(NSString *)path {
     
+    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    
+    NSError *err;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+    return YES;
 }
 
 - (void)configBaseURLString:(NSString *)urlString {

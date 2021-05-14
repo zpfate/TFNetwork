@@ -1,5 +1,5 @@
 //
-//  TFNetworkConfigVC.h
+//  TFNetworkEnvironmentVC.h
 //  TFNetwork
 //
 //  Created by Twisted Fate on 2021/5/14.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TFNetworkConfigVC : UIViewController
+@interface TFNetworkEnvironmentVC : UIViewController
 
 @end
 

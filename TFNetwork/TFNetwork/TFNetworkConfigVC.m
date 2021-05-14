@@ -1,17 +1,17 @@
 //
-//  TFNetworkConfigVC.m
+//  TFNetworkEnvironmentVC.m
 //  TFNetwork
 //
 //  Created by Twisted Fate on 2021/5/14.
 //
 
-#import "TFNetworkConfigVC.h"
+#import "TFNetworkEnvironmentVC.h"
 
-@interface TFNetworkConfigVC ()
+@interface TFNetworkEnvironmentVC ()
 
 @end
 
-@implementation TFNetworkConfigVC
+@implementation TFNetworkEnvironmentVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
