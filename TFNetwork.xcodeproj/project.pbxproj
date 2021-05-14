@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		564E57123C536BD0238159A2 /* Pods_TFNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D518D2D90B6EA1E8D37A7075 /* Pods_TFNetworkTests.framework */; };
+		5B15D783264E5DC8006BEB72 /* TFNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D782264E5DC8006BEB72 /* TFNetworkConfig.m */; };
+		5B15D789264E5E4A006BEB72 /* TFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D788264E5E4A006BEB72 /* TFNetworkManager.m */; };
+		5B15D78F264E6F23006BEB72 /* TFNetworkConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */; };
+		5B15D795264E6F3B006BEB72 /* TFNetworkConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D794264E6F3B006BEB72 /* TFNetworkConfigVC.m */; };
 		5B4F3E7C264D565300ECDA12 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F3E7B264D565300ECDA12 /* AppDelegate.m */; };
 		5B4F3E7F264D565300ECDA12 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F3E7E264D565300ECDA12 /* ViewController.m */; };
 		5B4F3E82264D565300ECDA12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4F3E80264D565300ECDA12 /* Main.storyboard */; };
@@ -40,6 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B15D781264E5DC8006BEB72 /* TFNetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkConfig.h; sourceTree = "<group>"; };
+		5B15D782264E5DC8006BEB72 /* TFNetworkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkConfig.m; sourceTree = "<group>"; };
+		5B15D787264E5E4A006BEB72 /* TFNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkManager.h; sourceTree = "<group>"; };
+		5B15D788264E5E4A006BEB72 /* TFNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkManager.m; sourceTree = "<group>"; };
+		5B15D78D264E6F23006BEB72 /* TFNetworkConfigCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkConfigCell.h; sourceTree = "<group>"; };
+		5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkConfigCell.m; sourceTree = "<group>"; };
+		5B15D793264E6F3B006BEB72 /* TFNetworkConfigVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkConfigVC.h; sourceTree = "<group>"; };
+		5B15D794264E6F3B006BEB72 /* TFNetworkConfigVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkConfigVC.m; sourceTree = "<group>"; };
 		5B4F3E77264D565300ECDA12 /* TFNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4F3E7A264D565300ECDA12 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B4F3E7B264D565300ECDA12 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,6 +185,14 @@
 				5B4F3EAE264D580C00ECDA12 /* TFHttpClient.m */,
 				5B4F3EB0264D5AB900ECDA12 /* TFResponse.h */,
 				5B4F3EB1264D5AB900ECDA12 /* TFResponse.m */,
+				5B15D787264E5E4A006BEB72 /* TFNetworkManager.h */,
+				5B15D788264E5E4A006BEB72 /* TFNetworkManager.m */,
+				5B15D781264E5DC8006BEB72 /* TFNetworkConfig.h */,
+				5B15D782264E5DC8006BEB72 /* TFNetworkConfig.m */,
+				5B15D78D264E6F23006BEB72 /* TFNetworkConfigCell.h */,
+				5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */,
+				5B15D793264E6F3B006BEB72 /* TFNetworkConfigVC.h */,
+				5B15D794264E6F3B006BEB72 /* TFNetworkConfigVC.m */,
 			);
 			path = TFNetwork;
 			sourceTree = "<group>";
@@ -429,6 +449,10 @@
 			files = (
 				5B4F3E7F264D565300ECDA12 /* ViewController.m in Sources */,
 				5B4F3E8A264D565400ECDA12 /* main.m in Sources */,
+				5B15D78F264E6F23006BEB72 /* TFNetworkConfigCell.m in Sources */,
+				5B15D789264E5E4A006BEB72 /* TFNetworkManager.m in Sources */,
+				5B15D783264E5DC8006BEB72 /* TFNetworkConfig.m in Sources */,
+				5B15D795264E6F3B006BEB72 /* TFNetworkConfigVC.m in Sources */,
 				5B4F3EAF264D580C00ECDA12 /* TFHttpClient.m in Sources */,
 				5B4F3E7C264D565300ECDA12 /* AppDelegate.m in Sources */,
 				5B4F3EB2264D5AB900ECDA12 /* TFResponse.m in Sources */,
@@ -607,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83J8888V77;
 				INFOPLIST_FILE = TFNetwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,6 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 83J8888V77;
 				INFOPLIST_FILE = TFNetwork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

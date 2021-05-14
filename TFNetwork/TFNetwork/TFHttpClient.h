@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TFHttpClient : NSObject
 
+@property (nonatomic, strong) NSDictionary <NSString *, NSString *> *headers;
+
 @end
 
 NS_ASSUME_NONNULL_END

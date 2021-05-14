@@ -6,8 +6,8 @@ target 'TFNetwork' do
   use_frameworks!
 
 
-pod 'TFKit-Objc', '~> 0.0.4'
-pod 'AFNetworking', '~> 3.2.1'
+pod 'TFKit-Objc'
+pod 'AFNetworking'
 
 
   # Pods for TFNetwork

@@ -1,30 +1,30 @@
 PODS:
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - TFKit-Objc (0.0.5):
-    - TFKit-Objc/BaseClass (= 0.0.5)
-    - TFKit-Objc/Category (= 0.0.5)
-    - TFKit-Objc/Utils (= 0.0.5)
-  - TFKit-Objc/BaseClass (0.0.5)
-  - TFKit-Objc/Category (0.0.5)
-  - TFKit-Objc/Utils (0.0.5)
+  - TFKit-Objc (0.1.0):
+    - TFKit-Objc/BaseClass (= 0.1.0)
+    - TFKit-Objc/Category (= 0.1.0)
+    - TFKit-Objc/Utils (= 0.1.0)
+  - TFKit-Objc/BaseClass (0.1.0)
+  - TFKit-Objc/Category (0.1.0)
+  - TFKit-Objc/Utils (0.1.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.2.1)
-  - TFKit-Objc (~> 0.0.4)
+  - AFNetworking
+  - TFKit-Objc
 
 SPEC REPOS:
   trunk:
@@ -32,9 +32,9 @@ SPEC REPOS:
     - TFKit-Objc
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  TFKit-Objc: 4b55bdf4f33c7578433d13764dd385d3360324c4
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  TFKit-Objc: dd503e3efd77bdff83b63c3d538f2a30bce40217
 
-PODFILE CHECKSUM: 8160c871b9d9314c687c9ad4eec434e9009c610d
+PODFILE CHECKSUM: e26d54b58cb0e928d339217779c841c281f20771
 
 COCOAPODS: 1.10.0
