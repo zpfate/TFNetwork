@@ -5,9 +5,9 @@
 //  Created by Twisted Fate on 2021/5/14.
 //
 
-#import "TFNetworkManager.h"
+#import "TFConfigManager.h"
 #import "TFNetworkEnvironment.h"
-@interface TFNetworkManager ()
+@interface TFConfigManager ()
 
 @property (nonatomic, strong) NSURL *baseURL;
 
@@ -15,17 +15,18 @@
 
 @end
 
-@implementation TFNetworkManager
+@implementation TFConfigManager
 
 + (instancetype)sharedManager {
     
-    static TFNetworkManager *manager = nil;
+    static TFConfigManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[TFNetworkManager alloc] init];
+        manager = [[TFConfigManager alloc] init];
     });
     return manager;
 }
+
 
 - (BOOL)loadNetworkEnvironmens:(NSArray <TFNetworkEnvironment *>*)environments {
 
@@ -47,5 +48,8 @@
     self.baseURL = [NSURL URLWithString:urlString];
 }
 
+- (NSArray<TFNetworkEnvironment *> *)getEnvironmentList {
+    return self.environments;
+}
 
 @end

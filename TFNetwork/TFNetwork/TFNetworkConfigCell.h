@@ -9,7 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TFNetworkEnvironmentCell : UITableViewCell
+@interface TFNetworkConfigCell : UITableViewCell
+
+- (void)updateCellWithEnvironment:(TFNetworkEnvironment *)environment;
 
 @end
 

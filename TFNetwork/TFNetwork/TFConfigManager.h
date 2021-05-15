@@ -8,9 +8,13 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class TFNetworkEnvironment;
 
-@interface TFNetworkManager : NSObject
+@interface TFConfigManager : NSObject
 
++ (instancetype)sharedManager;
+
+- (NSArray <TFNetworkEnvironment *>*)getEnvironmentList;
 
 @end
 
