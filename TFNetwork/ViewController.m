@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TFNetwork/TFNetwork.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+- (IBAction)openConfig:(id)sender {
+    
+    [TFConfigManager.sharedManager openNetworkConfigVCInViewController:self];
     
 }
 

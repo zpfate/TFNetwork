@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		564E57123C536BD0238159A2 /* Pods_TFNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D518D2D90B6EA1E8D37A7075 /* Pods_TFNetworkTests.framework */; };
+		5B0D71EF265012A10039958A /* network_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D71EB265012A10039958A /* network_normal@2x.png */; };
+		5B0D71F0265012A10039958A /* network_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D71EC265012A10039958A /* network_normal@3x.png */; };
+		5B0D71F1265012A10039958A /* network_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D71ED265012A10039958A /* network_select@2x.png */; };
+		5B0D71F2265012A10039958A /* network_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0D71EE265012A10039958A /* network_select@3x.png */; };
 		5B15D783264E5DC8006BEB72 /* TFNetworkEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D782264E5DC8006BEB72 /* TFNetworkEnvironment.m */; };
 		5B15D789264E5E4A006BEB72 /* TFConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D788264E5E4A006BEB72 /* TFConfigManager.m */; };
 		5B15D78F264E6F23006BEB72 /* TFNetworkConfigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */; };
@@ -44,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0D71EB265012A10039958A /* network_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network_normal@2x.png"; sourceTree = "<group>"; };
+		5B0D71EC265012A10039958A /* network_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network_normal@3x.png"; sourceTree = "<group>"; };
+		5B0D71ED265012A10039958A /* network_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network_select@2x.png"; sourceTree = "<group>"; };
+		5B0D71EE265012A10039958A /* network_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "network_select@3x.png"; sourceTree = "<group>"; };
+		5B0D71F3265012DD0039958A /* TFNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetwork.h; sourceTree = "<group>"; };
 		5B15D781264E5DC8006BEB72 /* TFNetworkEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFNetworkEnvironment.h; sourceTree = "<group>"; };
 		5B15D782264E5DC8006BEB72 /* TFNetworkEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkEnvironment.m; sourceTree = "<group>"; };
 		5B15D787264E5E4A006BEB72 /* TFConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFConfigManager.h; sourceTree = "<group>"; };
@@ -121,6 +130,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B0D71EA265012A10039958A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5B0D71EB265012A10039958A /* network_normal@2x.png */,
+				5B0D71EC265012A10039958A /* network_normal@3x.png */,
+				5B0D71ED265012A10039958A /* network_select@2x.png */,
+				5B0D71EE265012A10039958A /* network_select@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		5B4F3E6E264D565300ECDA12 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +201,7 @@
 		5B4F3EAC264D57AC00ECDA12 /* TFNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				5B0D71EA265012A10039958A /* Resource */,
 				5B4F3EAD264D580C00ECDA12 /* TFHttpClient.h */,
 				5B4F3EAE264D580C00ECDA12 /* TFHttpClient.m */,
 				5B4F3EB0264D5AB900ECDA12 /* TFResponse.h */,
@@ -193,6 +214,7 @@
 				5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */,
 				5B15D793264E6F3B006BEB72 /* TFNetworkConfigVC.h */,
 				5B15D794264E6F3B006BEB72 /* TFNetworkConfigVC.m */,
+				5B0D71F3265012DD0039958A /* TFNetwork.h */,
 			);
 			path = TFNetwork;
 			sourceTree = "<group>";
@@ -317,9 +339,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0D71EF265012A10039958A /* network_normal@2x.png in Resources */,
+				5B0D71F1265012A10039958A /* network_select@2x.png in Resources */,
 				5B4F3E87264D565400ECDA12 /* LaunchScreen.storyboard in Resources */,
 				5B4F3E84264D565400ECDA12 /* Assets.xcassets in Resources */,
 				5B4F3E82264D565300ECDA12 /* Main.storyboard in Resources */,
+				5B0D71F0265012A10039958A /* network_normal@3x.png in Resources */,
+				5B0D71F2265012A10039958A /* network_select@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

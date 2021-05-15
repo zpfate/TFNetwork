@@ -8,7 +8,7 @@
 #import "TFNetworkConfigCell.h"
 #import <TFKit_Objc/TFKit-Objc.h>
 #import "TFNetworkEnvironment.h"
-
+#import "TFConfigManager.h"
 @interface TFNetworkConfigCell ()
 
 @property (nonatomic, strong) UIButton *selectBtn;
@@ -17,12 +17,18 @@
 
 @property (nonatomic, strong) UITextField *hostTextField;
 
+@property (nonatomic, weak) TFNetworkEnvironment *environment;
 @end
 
 @implementation TFNetworkConfigCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.contentView.layer.shadowOffset = CGSizeMake(1, 1);
+        self.contentView.layer.shadowOpacity = .6f;
+        self.contentView.layer.shadowColor = [UIColor tf_colorWithHexString:@"#FDFDFD"].CGColor;
         [self setupViews];
     }
     return self;
@@ -37,12 +43,21 @@
 }
 
 - (void)selectAction:(UIButton *)sender {
+    if (sender.selected) {
+        return;
+    }
     sender.selected = !sender.selected;
+    [TFConfigManager.sharedManager changeConfigWithEnvironment:self.environment];
+    UITableView *tableView = (UITableView *)self.superview;
+    [tableView reloadData];
 }
 
 - (void)updateCellWithEnvironment:(TFNetworkEnvironment *)environment {
     
-    
+    self.environment = environment;
+    self.envNameLabel.text = environment.environment;
+    self.hostTextField.text = environment.urlString;
+    self.selectBtn.selected = environment.selected;
 }
 
 #pragma mark -- Getter
@@ -69,9 +84,10 @@
 - (UITextField *)hostTextField {
     if (!_hostTextField) {
         _hostTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 40, kScreenWidth - 80, 40)];
+        _hostTextField.backgroundColor = [UIColor tf_colorWithHexString:@"#FDFDFD"];
+        _hostTextField.borderStyle = UITextBorderStyleRoundedRect;
         _hostTextField.textAlignment = NSTextAlignmentLeft;
         _hostTextField.delegate = self;
-        _hostTextField.enabled = NO;
     }
     return _hostTextField;
 }

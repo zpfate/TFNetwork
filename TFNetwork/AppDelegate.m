@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TFNetwork/TFNetwork.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    TFNetworkEnvironment *env1 = [[TFNetworkEnvironment alloc] init];
+    env1.environment = @"开发";
+    env1.selected = YES;
+    env1.urlString = @"http://www.baidu.com/debug";
+    TFNetworkEnvironment *env2 = [[TFNetworkEnvironment alloc] init];
+    env2.environment = @"联调";
+    env2.urlString = @"http://www.baidu.com/integration";
+    TFNetworkEnvironment *env3 = [[TFNetworkEnvironment alloc] init];
+    env3.environment = @"测试";
+    env3.urlString = @"http://www.baidu.com/test";
+    TFNetworkEnvironment *env4 = [[TFNetworkEnvironment alloc] init];
+    env4.environment = @"准生产";
+    env4.urlString = @"http://www.baidu.com/preProduction";
+    TFNetworkEnvironment *env5 = [[TFNetworkEnvironment alloc] init];
+    env5.environment = @"生产";
+    env5.urlString = @"http://www.baidu.com/production";
+    
+    NSArray *environments = @[env1, env2, env3, env4, env5];
+    [TFConfigManager.sharedManager loadNetworkEnvironmens:environments];
+    
     return YES;
 }
 

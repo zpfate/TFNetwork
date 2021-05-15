@@ -48,6 +48,11 @@
     TFNetworkConfigCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TFNetworkConfigCell.class) forIndexPath:indexPath];
     TFNetworkEnvironment *env = self.list[indexPath.row];
     [cell updateCellWithEnvironment:env];
+    
+    cell.selecteEnvironmentBlock = ^{
+      /// 切换环境
+    };
+    
     return cell;
 }
 
@@ -61,7 +66,7 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.list.count * 80) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 480) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:TFNetworkConfigCell.class forCellReuseIdentifier:NSStringFromClass(TFNetworkConfigCell.class)];
         _tableView.delegate = self;
