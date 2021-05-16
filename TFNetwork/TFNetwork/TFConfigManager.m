@@ -39,12 +39,9 @@
 }
 
 /// 选择配置
-- (void)changeConfigWithEnvironment:(TFNetworkEnvironment *)environment {
+- (void)setCurrentEnvironment:(TFNetworkEnvironment *)currentEnvironment {
     
-    for (TFNetworkEnvironment *env in self.environments) {
-        env.selected = NO;
-    }
-    environment.selected = YES;
+    _currentEnvironment = currentEnvironment;
 }
 
 /// 判断是否当前环境
@@ -60,6 +57,9 @@
 
 - (BOOL)loadNetworkEnvironmens:(NSArray <TFNetworkEnvironment *>*)environments {
     self.environments = environments;
+    if (environments.count > 0) {
+        self.currentEnvironment = environments[0];
+    }
     return YES;
 }
 

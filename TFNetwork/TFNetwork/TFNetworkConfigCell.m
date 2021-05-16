@@ -59,7 +59,7 @@
         return;
     }
     sender.selected = !sender.selected;
-    [TFConfigManager.sharedManager changeConfigWithEnvironment:self.environment];
+    [TFConfigManager.sharedManager setCurrentEnvironment:self.environment];
     UITableView *tableView = (UITableView *)self.superview;
     [tableView reloadData];
 }
