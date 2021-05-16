@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param environment 要更改的配置
 - (void)changeConfigWithEnvironment:(TFNetworkEnvironment *)environment;
 
+/// 获取baseURL
+- (NSURL *)getBaseURL;
+
 /// 获取网络环境配置数组
 - (NSArray <TFNetworkEnvironment *>*)getEnvironmentList;
 

@@ -11,7 +11,7 @@
 
 @interface TFConfigManager ()
 
-@property (nonatomic, strong) NSURL *baseURL;
+@property (nonatomic, strong) TFNetworkEnvironment *currentEnvironment;
 
 @property (nonatomic, strong) NSArray <TFNetworkEnvironment *>*environments;
 
@@ -61,8 +61,9 @@
     return YES;
 }
 
-- (void)configBaseURLString:(NSString *)urlString {
-    self.baseURL = [NSURL URLWithString:urlString];
+- (NSURL *)getBaseURL {
+    NSString *urlString = self.currentEnvironment.urlString;
+    return [NSURL URLWithString:urlString];
 }
 
 - (NSArray<TFNetworkEnvironment *> *)getEnvironmentList {
