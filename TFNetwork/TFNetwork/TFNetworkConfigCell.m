@@ -21,7 +21,7 @@
 @end
 
 @implementation TFNetworkConfigCell
-
+#pragma mark -- Life Cycle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
@@ -34,7 +34,18 @@
     return self;
 }
 
+#pragma mark -- Public Methods
+/// 更新布局
+- (void)updateCellWithEnvironment:(TFNetworkEnvironment *)environment {
+    
+    self.environment = environment;
+    self.envNameLabel.text = environment.environment;
+    self.hostTextField.text = environment.urlString;
+    self.selectBtn.selected = [TFConfigManager.sharedManager checkCurrentEnvironment:environment];
+}
 
+#pragma mark -- Private Methods
+/// 布局UI
 - (void)setupViews {
     
     [self.contentView addSubview:self.selectBtn];
@@ -42,6 +53,7 @@
     [self.contentView addSubview:self.hostTextField];
 }
 
+/// 选择响应
 - (void)selectAction:(UIButton *)sender {
     if (sender.selected) {
         return;
@@ -50,14 +62,6 @@
     [TFConfigManager.sharedManager changeConfigWithEnvironment:self.environment];
     UITableView *tableView = (UITableView *)self.superview;
     [tableView reloadData];
-}
-
-- (void)updateCellWithEnvironment:(TFNetworkEnvironment *)environment {
-    
-    self.environment = environment;
-    self.envNameLabel.text = environment.environment;
-    self.hostTextField.text = environment.urlString;
-    self.selectBtn.selected = environment.selected;
 }
 
 #pragma mark -- Getter
@@ -87,7 +91,7 @@
         _hostTextField.backgroundColor = [UIColor tf_colorWithHexString:@"#FDFDFD"];
         _hostTextField.borderStyle = UITextBorderStyleRoundedRect;
         _hostTextField.textAlignment = NSTextAlignmentLeft;
-        _hostTextField.delegate = self;
+        _hostTextField.enabled = NO;
     }
     return _hostTextField;
 }

@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param vc 当前vc
 - (void)openNetworkConfigVCInViewController:(UIViewController *)vc;
 
+
+- (BOOL)checkCurrentEnvironment:(TFNetworkEnvironment *)environment;
+
 /// 更改网络环境配置
 /// @param environment 要更改的配置
 - (void)changeConfigWithEnvironment:(TFNetworkEnvironment *)environment;

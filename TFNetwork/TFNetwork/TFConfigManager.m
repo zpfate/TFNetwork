@@ -47,6 +47,17 @@
     environment.selected = YES;
 }
 
+/// 判断是否当前环境
+- (BOOL)checkCurrentEnvironment:(TFNetworkEnvironment *)environment {
+    if (environment == self.currentEnvironment) {
+        return YES;
+    }
+    if ([environment.environment isEqualToString:self.currentEnvironment.environment]) {
+        return YES;
+    }
+    return NO;
+}
+
 - (BOOL)loadNetworkEnvironmens:(NSArray <TFNetworkEnvironment *>*)environments {
     self.environments = environments;
     return YES;
