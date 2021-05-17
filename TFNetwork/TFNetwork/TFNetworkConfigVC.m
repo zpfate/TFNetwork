@@ -66,6 +66,11 @@
 
 - (UITableView *)tableView {
     if (!_tableView) {
+        
+        
+        CGFloat saveBtnHeight = 50.f;
+        CGFloat safeHeight = kScreenHeight - kbottm
+        
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 480) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
         [_tableView registerClass:TFNetworkConfigCell.class forCellReuseIdentifier:NSStringFromClass(TFNetworkConfigCell.class)];

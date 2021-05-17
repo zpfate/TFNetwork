@@ -15,7 +15,6 @@
 
 @implementation TFHttpClient
 
-
 - (TFHttpClient *)initClient {
     if (self = [super init]) {
         _manager = [[AFHTTPSessionManager alloc] init];
@@ -25,7 +24,6 @@
     return self;
     
 }
-
 
 + (TFHttpClient *)client {
     TFHttpClient *client = [[[self class] alloc] init];

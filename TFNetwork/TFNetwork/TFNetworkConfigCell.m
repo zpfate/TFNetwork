@@ -87,7 +87,7 @@
 
 - (UITextField *)hostTextField {
     if (!_hostTextField) {
-        _hostTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 40, kScreenWidth - 80, 40)];
+        _hostTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 40, kScreenWidth - 80, 35)];
         _hostTextField.backgroundColor = [UIColor tf_colorWithHexString:@"#FDFDFD"];
         _hostTextField.borderStyle = UITextBorderStyleRoundedRect;
         _hostTextField.textAlignment = NSTextAlignmentLeft;
