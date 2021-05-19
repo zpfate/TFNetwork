@@ -202,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				5B0D71EA265012A10039958A /* Resource */,
+				5B0D71F3265012DD0039958A /* TFNetwork.h */,
 				5B4F3EAD264D580C00ECDA12 /* TFHttpClient.h */,
 				5B4F3EAE264D580C00ECDA12 /* TFHttpClient.m */,
 				5B4F3EB0264D5AB900ECDA12 /* TFResponse.h */,
@@ -214,7 +215,6 @@
 				5B15D78E264E6F23006BEB72 /* TFNetworkConfigCell.m */,
 				5B15D793264E6F3B006BEB72 /* TFNetworkConfigVC.h */,
 				5B15D794264E6F3B006BEB72 /* TFNetworkConfigVC.m */,
-				5B0D71F3265012DD0039958A /* TFNetwork.h */,
 			);
 			path = TFNetwork;
 			sourceTree = "<group>";

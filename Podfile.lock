@@ -14,17 +14,11 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - TFKit-Objc (0.1.0):
-    - TFKit-Objc/BaseClass (= 0.1.0)
-    - TFKit-Objc/Category (= 0.1.0)
-    - TFKit-Objc/Utils (= 0.1.0)
-  - TFKit-Objc/BaseClass (0.1.0)
-  - TFKit-Objc/Category (0.1.0)
-  - TFKit-Objc/Utils (0.1.0)
+  - TFKit-Objc (0.1.2)
 
 DEPENDENCIES:
   - AFNetworking
-  - TFKit-Objc
+  - TFKit-Objc (~> 0.1.2)
 
 SPEC REPOS:
   trunk:
@@ -33,8 +27,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  TFKit-Objc: dd503e3efd77bdff83b63c3d538f2a30bce40217
+  TFKit-Objc: 1092b95bf870d8a31e58cd6ed3f2bd168bdbcbde
 
-PODFILE CHECKSUM: 090cbab8c6d6c99eb6031403789889de77c6308a
+PODFILE CHECKSUM: b6ee1216fe77a2306e1a5965b73455342cce3ab1
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

@@ -29,7 +29,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveButton.frame = CGRectMake(50, CGRectGetMaxY(self.tableView.frame) + 40, kScreenWidth - 100, 50);
+    saveButton.frame = CGRectMake(50, kScreenHeight - kBottomSafeAreaHeight - 20 - 50, kScreenWidth - 100, 50);
     saveButton.backgroundColor = [UIColor tf_colorWithHexString:@"d81e06"];
     [saveButton setTitle:@"保存" forState:UIControlStateNormal];
     [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -64,15 +64,18 @@
     return 80.0f;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.01f;
+}
+
 - (UITableView *)tableView {
     if (!_tableView) {
         
-        
         CGFloat saveBtnHeight = 50.f;
-        CGFloat safeHeight = kScreenHeight - kbottm
-        
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 480) style:UITableViewStylePlain];
+        CGFloat bottomSafe = kBottomSafeAreaHeight + 20;
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 40 - saveBtnHeight - bottomSafe) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         [_tableView registerClass:TFNetworkConfigCell.class forCellReuseIdentifier:NSStringFromClass(TFNetworkConfigCell.class)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
