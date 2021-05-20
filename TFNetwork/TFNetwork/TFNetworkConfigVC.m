@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UIButton *saveBtn;
+
 @property (nonatomic, strong) NSArray *list;
 
 @end
@@ -28,13 +30,8 @@
     self.title = @"环境配置";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
-    UIButton *saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    saveButton.frame = CGRectMake(50, kScreenHeight - kBottomSafeAreaHeight - 20 - 50, kScreenWidth - 100, 50);
-    saveButton.backgroundColor = [UIColor tf_colorWithHexString:@"d81e06"];
-    [saveButton setTitle:@"保存" forState:UIControlStateNormal];
-    [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [saveButton addTarget:self action:@selector(saveAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:saveButton];
+
+    [self.view addSubview:self.saveBtn];
 }
 
 - (void)saveAction:(UIButton *)sender {
@@ -48,11 +45,6 @@
     TFNetworkConfigCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(TFNetworkConfigCell.class) forIndexPath:indexPath];
     TFNetworkEnvironment *env = self.list[indexPath.row];
     [cell updateCellWithEnvironment:env];
-    
-    cell.selecteEnvironmentBlock = ^{
-      /// 切换环境
-    };
-    
     return cell;
 }
 
@@ -82,6 +74,21 @@
     }
     return _tableView;
 }
+
+- (UIButton *)saveBtn {
+    if (!_saveBtn) {
+        _saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _saveBtn.frame = CGRectMake(50, kScreenHeight - kBottomSafeAreaHeight - 20 - 50, kScreenWidth - 100, 50);
+        _saveBtn.layer.cornerRadius = 5;
+        _saveBtn.clipsToBounds = YES;
+        _saveBtn.backgroundColor = [UIColor tf_colorWithHexString:@"d81e06"];
+        [_saveBtn setTitle:@"保存" forState:UIControlStateNormal];
+        [_saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_saveBtn addTarget:self action:@selector(saveAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _saveBtn;
+}
+
 /*
 #pragma mark - Navigation
 

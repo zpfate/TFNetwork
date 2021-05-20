@@ -55,6 +55,7 @@
     return NO;
 }
 
+/// 加载网络环境配置
 - (BOOL)loadNetworkEnvironmens:(NSArray <TFNetworkEnvironment *>*)environments {
     self.environments = environments;
     if (environments.count > 0) {
