@@ -39,6 +39,18 @@
     }];
 }
 
+- (void)GET:(nonnull NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))uploadProgress completion:(TFResponseBlock)completion {
+    
+    [_manager GET:URLString parameters:parameters headers:self.headers progress:uploadProgress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        TFResponse *response = [self handleTask:task responseObject:responseObject error:nil];
+        BLOCK_EXEC(completion, response);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        TFResponse *response = [self handleTask:task responseObject:nil error:error];
+        BLOCK_EXEC(completion, response);
+    }];
+    
+}
 
 - (TFResponse *)handleTask:(NSURLSessionDataTask *)task responseObject:(nullable id)responseObject error:(NSError *)error {
     

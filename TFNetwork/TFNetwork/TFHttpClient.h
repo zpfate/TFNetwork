@@ -14,6 +14,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSDictionary <NSString *, NSString *> *headers;
 
+/// get请求
+/// @param URLString 网络请求链接
+/// @param parameters 参数
+/// @param uploadProgress 进度
+/// @param completion 完成回调
+- (void)GET:(nonnull NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))uploadProgress completion:(TFResponseBlock)completion;
+
+/// post请求
+/// @param URLString 网络请求链接
+/// @param parameters 参数
+/// @param uploadProgress 进度
+/// @param completion 完成回调
+- (void)POST:(nonnull NSString *)URLString parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))uploadProgress completion:(TFResponseBlock)completion;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
